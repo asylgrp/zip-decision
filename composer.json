@@ -1,0 +1,24 @@
+{
+    "name": "workbenchapp/zip-decision",
+    "description": "Legacy zip decision format reader for the workbench project",
+    "homepage": "https://github.com/workbenchapp/zip-decision",
+    "type": "library",
+    "license": "Unlicense",
+    "authors": [
+        {
+            "name": "Hannes Forsgård",
+            "email": "hannes.forsgard@fripost.org"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "workbenchapp\\zipdecision\\": "src/"
+        }
+    },
+    "require": {
+        "php": ">=7.1",
+        "ext-zip": "*",
+        "byrokrat/banking": "^1.4",
+        "byrokrat/amount": "^1.0"
+    }
+}
