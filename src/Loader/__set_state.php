@@ -32,7 +32,7 @@ namespace asylgrp\workbench\Domain {
     class Claim extends \workbenchapp\zipdecision\Claim {
         public static function __set_state(array $values)
         {
-            return new self(
+            $claim = new self(
                 $values['contact'],
                 $values['requested'],
                 $values['account'],
@@ -41,6 +41,10 @@ namespace asylgrp\workbench\Domain {
                 $values['created'],
                 $values['updated']
             );
+
+            $claim->setApprovedAmount($values['approved']);
+
+            return $claim;
         }
     }
 
